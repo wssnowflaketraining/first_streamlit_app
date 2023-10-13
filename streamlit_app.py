@@ -49,7 +49,7 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_c
 
 streamlit.header("The fruit load list contains:")
 #Snowflake-related functions
-def get fruit_load_list():
+def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
     mu_cur.execute("select * from fruit_load_list")
     return my_cur.fetchall()
